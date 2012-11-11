@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <TextView
+                android:id="@+id/fBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="5pt" />
+
+            <TextView
+                android:id="@+id/fTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/friends"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="15pt" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TableRow
+        android:id="@+id/LinearLayout03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/fProf"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="-6dp"
+            android:layout_marginLeft="-5dp"
+            android:text="@string/prof"
+            android:textSize="7pt" />
+
+        <Button
+            android:id="@+id/fMKB"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="-6dp"
+            android:layout_marginLeft="-6dp"
+            android:text="@string/mykoinBox"
+            android:textSize="7pt" />
+
+        <Button
+            android:id="@+id/fFriends"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="-6dp"
+            android:layout_marginLeft="-6dp"
+            android:text="@string/friends"
+            android:textSize="7pt" />
+
+        <Button
+            android:id="@+id/fLogOut"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="57dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="-6dp"
+            android:layout_marginLeft="-5dp"
+            android:text="@string/logout"
+            android:textSize="5pt" />
+    </TableRow>
+
+</RelativeLayout>

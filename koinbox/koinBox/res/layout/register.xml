@@ -1,0 +1,160 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:visibility="visible" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/welcomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="39dp"
+            android:text="@string/welcome"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="13.5pt" />
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="@string/hintUser"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/passW"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-5dp"
+            android:ems="10"
+            android:hint="@string/hintPass"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/checkpassW"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-5dp"
+            android:ems="10"
+            android:hint="@string/hintRPass"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/personal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="8pt" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-5dp"
+            android:ems="10"
+            android:hint="@string/hintName"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-5dp"
+            android:ems="10"
+            android:hint="@string/hintEmail"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/phoneN"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-5dp"
+            android:ems="10"
+            android:hint="@string/hintPhone"
+            android:inputType="phone" />
+        
+        <Spinner
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-5dp" />
+        
+        <EditText
+            android:id="@+id/school"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-5dp"
+            android:ems="10"
+            android:hint="@string/hintSchool"
+            android:inputType="text" />
+        
+        <EditText
+            android:id="@+id/homeTown"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-5dp"
+            android:ems="10"
+            android:hint="@string/hintHT"
+            android:inputType="text" />
+        
+        <EditText
+            android:id="@+id/destination"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-5dp"
+            android:ems="10"
+            android:hint="@string/hintDes"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/ToS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/terms"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="5pt" />
+
+        <TextView
+            android:id="@+id/TOS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="-15dp"
+            android:clickable="true"
+            android:linksClickable="true"
+            android:text="@string/TOS"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="5pt" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/register" />
+    </LinearLayout>
+
+</ScrollView>
