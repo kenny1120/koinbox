@@ -89,12 +89,23 @@
             android:hint="@string/hintPhone"
             android:inputType="phone" />
         
+        <TextView
+            android:id="@+id/ageTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/age"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="8pt" />
+        
         <Spinner
             android:id="@+id/age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="-5dp" />
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="-35dp"
+            android:hint="@string/no" />
         
         <EditText
             android:id="@+id/school"
@@ -140,7 +151,7 @@
             android:id="@+id/TOS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="-15dp"
             android:clickable="true"
             android:linksClickable="true"

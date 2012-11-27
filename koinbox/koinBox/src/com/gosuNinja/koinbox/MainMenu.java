@@ -3,6 +3,10 @@ package com.gosuNinja.koinbox;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
+import android.graphics.Shader.TileMode;
 import android.graphics.Typeface;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,6 +37,10 @@ public class MainMenu extends Activity implements OnClickListener {
         Typeface sIn = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
         TextView sI = (TextView) findViewById(R.id.signIn);  
         sI.setTypeface(sIn);
+        Shader textShader=new LinearGradient(2, 0, 4, 60,
+                new int[]{Color.parseColor("#000000"),Color.parseColor("#000000"),Color.parseColor("#000000")},
+                new float[]{0, 3,1}, TileMode.MIRROR);
+        txt.getPaint().setShader(textShader);
     }
 
     public void onClick(View v){

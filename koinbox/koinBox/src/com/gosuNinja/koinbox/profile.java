@@ -1,6 +1,9 @@
 package com.gosuNinja.koinbox;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class profile extends Activity implements OnClickListener {
+	final Context context = this;
 	Button proProf, proMKB, proFriend, proLogout;
 	View pback;
 	
@@ -22,8 +26,6 @@ public class profile extends Activity implements OnClickListener {
 		proMKB.setOnClickListener(this);
 		proFriend = (Button) findViewById(R.id.pFriends);
 		proFriend.setOnClickListener(this);
-		proLogout = (Button) findViewById(R.id.pLogOut);
-		proLogout.setOnClickListener(this);
 		pback = (View) findViewById(R.id.pBack);
 		pback.setOnClickListener(this);
 		Typeface font = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
@@ -41,6 +43,29 @@ public class profile extends Activity implements OnClickListener {
 		Typeface pLO = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
 		TextView pL = (TextView) findViewById(R.id.pLogOut);  
 		pL.setTypeface(pLO);
+		proLogout = (Button) findViewById(R.id.pLogOut);
+		proLogout.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg) {
+		        new AlertDialog.Builder(context)
+		        	.setMessage(R.string.LOtext)
+		               .setPositiveButton(R.string.bye, new DialogInterface.OnClickListener() {
+		                   public void onClick(DialogInterface dialog, int id) {
+		                	   Intent pLO = new Intent(context, MainMenu.class);
+		                	   startActivity(pLO);
+		                	   
+		                   }
+		               })
+		               .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+		                   public void onClick(DialogInterface dialog, int id) {
+		                	   dialog.cancel();
+		                   }
+		               })
+		               .show();
+		        }
+		    });
+
 		
 	}
 	@Override
@@ -58,18 +83,15 @@ public class profile extends Activity implements OnClickListener {
 			Intent pFRN = new Intent(this, myFriends.class);
 			startActivity(pFRN);
 			break;
-		case R.id.pLogOut:
-			Intent plO = new Intent(this, Logout.class);
-			startActivity(plO);
-			break;
 		case R.id.pBack:
 			Intent pBK = new Intent(this, home.class);
 			startActivity(pBK);
 			break;
+		}
+	
 			
 		
 		}
-	
-
 	}
-}
+
+

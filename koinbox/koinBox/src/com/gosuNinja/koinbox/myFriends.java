@@ -1,6 +1,9 @@
 package com.gosuNinja.koinbox;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class myFriends extends Activity implements OnClickListener {
+	final Context context = this;
 	Button frnProf, frnMKB, frnFriend, frnLogout;
 	View fback;
 	
@@ -22,8 +26,6 @@ public class myFriends extends Activity implements OnClickListener {
 		frnMKB.setOnClickListener(this);
 		frnFriend = (Button) findViewById(R.id.fFriends);
 	    frnFriend.setOnClickListener(this);
-		frnLogout = (Button) findViewById(R.id.fLogOut);
-		frnLogout.setOnClickListener(this);
 		fback = (View) findViewById(R.id.fBack);
 		fback.setOnClickListener(this);
 		Typeface font = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
@@ -41,6 +43,31 @@ public class myFriends extends Activity implements OnClickListener {
 		Typeface fLO = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
 		TextView fL = (TextView) findViewById(R.id.fLogOut);  
 		fL.setTypeface(fLO);
+		frnLogout = (Button) findViewById(R.id.fLogOut);
+		frnLogout.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg) {
+				new AlertDialog.Builder(context)
+					.setMessage(R.string.LOtext)
+						.setPositiveButton(R.string.bye, new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								Intent mfLO = new Intent(context, MainMenu.class);
+								mfLO.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+								startActivity(mfLO);
+								
+							}
+						})
+						.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.cancel();
+							}
+						})
+						.show();
+				}	
+
+			});
+
 		
 	}
 	@Override
@@ -57,10 +84,6 @@ public class myFriends extends Activity implements OnClickListener {
 		case R.id.fFriends:
 			Intent fFRN = new Intent(this, myFriends.class);
 			startActivity(fFRN);
-			break;
-		case R.id.fLogOut:
-			Intent flO = new Intent(this, Logout.class);
-			startActivity(flO);
 			break;
 		case R.id.fBack:
 			Intent fBK = new Intent(this, home.class);

@@ -14,6 +14,7 @@
     <string name="hintName">Name</string>
     <string name="hintEmail">Email</string>
     <string name="hintPhone">Phone                            optional</string>
+    <string name ="age">Age:</string>
     <string name="phrase">Share your world!</string>
     <string name="hintRPass">Re-enter</string>
     <string name="hintSchool">School</string>
@@ -24,8 +25,12 @@
     <string name="friends">Friends</string>
     <string name="about">About</string>
     <string name="logout">Logout</string>
-    <string name="home">◄Home</string>
+    <string name="home">Home</string>
+    <string name="back">◄Home</string>
     <string name="aboutTitle">About Us</string>
+    <string name="LOtext">Are you logging out?</string>
+    <string name="bye">Bye!</string>
+    <string name="no">NO!</string>
     <string name="aboutInfo">We are a group of Macalester students 
         					who enjoy making mind-blowing apps. 
         					Koinbox is our first app. </string>

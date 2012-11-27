@@ -1,6 +1,9 @@
 package com.gosuNinja.koinbox;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class myKoinBox extends Activity implements OnClickListener {
+	final Context context = this;
 	Button mkbProf, mkbMKB, mkbFriend, mkbLogout;
 	View mback;
 	
@@ -22,25 +26,47 @@ public class myKoinBox extends Activity implements OnClickListener {
 		mkbMKB.setOnClickListener(this);
 		mkbFriend = (Button) findViewById(R.id.mFriends);
 		mkbFriend.setOnClickListener(this);
-		mkbLogout = (Button) findViewById(R.id.mLogOut);
-		mkbLogout.setOnClickListener(this);
 		mback = (View) findViewById(R.id.mBack);
 		mback.setOnClickListener(this);
 		Typeface font = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
 		TextView txt = (TextView) findViewById(R.id.mTitle);  
 		txt.setTypeface(font);
-		Typeface pPro = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
-		TextView pP = (TextView) findViewById(R.id.mProf);  
-		pP.setTypeface(pPro);
-		Typeface PMKB = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
-		TextView pK = (TextView) findViewById(R.id.mMKB);  
-		pK.setTypeface(PMKB);
-		Typeface pFR = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
-		TextView pF = (TextView) findViewById(R.id.mFriends);  
-		pF.setTypeface(pFR);
-		Typeface pLO = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
-		TextView pL = (TextView) findViewById(R.id.mLogOut);  
-		pL.setTypeface(pLO);
+		Typeface mkbPro = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
+		TextView mkbP = (TextView) findViewById(R.id.mProf);  
+		mkbP.setTypeface(mkbPro);
+		Typeface mMKB = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
+		TextView mkbK = (TextView) findViewById(R.id.mMKB);  
+		mkbK.setTypeface(mMKB);
+		Typeface mkbFR = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
+		TextView mkbF = (TextView) findViewById(R.id.mFriends);  
+		mkbF.setTypeface(mkbFR);
+		Typeface mkbLO = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
+		TextView mkbL = (TextView) findViewById(R.id.mLogOut);  
+		mkbL.setTypeface(mkbLO);
+		mkbLogout = (Button) findViewById(R.id.mLogOut);
+		mkbLogout.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View varg) {
+				new AlertDialog.Builder(context)
+	        	.setMessage(R.string.LOtext)
+	               .setPositiveButton(R.string.bye, new DialogInterface.OnClickListener() {
+	                   public void onClick(DialogInterface dialog, int id) {
+	                	   Intent mfLO = new Intent(context, MainMenu.class);
+	                	   startActivity(mfLO);
+	                	   
+	                   }
+	               })
+	               .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+	                   public void onClick(DialogInterface dialog, int id) {
+	                	   dialog.cancel();
+	                   }
+	               })
+	               .show();
+				
+			}
+		});
+
 		
 	}
 	@Override
@@ -57,10 +83,6 @@ public class myKoinBox extends Activity implements OnClickListener {
 		case R.id.mFriends:
 			Intent mFRN = new Intent(this, myFriends.class);
 			startActivity(mFRN);
-			break;
-		case R.id.mLogOut:
-			Intent mlO = new Intent(this, Logout.class);
-			startActivity(mlO);
 			break;
 		case R.id.mBack:
 			Intent mBK = new Intent(this, home.class);

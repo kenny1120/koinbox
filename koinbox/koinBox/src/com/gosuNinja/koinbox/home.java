@@ -1,6 +1,9 @@
 package com.gosuNinja.koinbox;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class home extends Activity implements OnClickListener{
+	final Context context = this;
 	Button hProf, hmykb, hFriend, hAbout, hLogout;
 	
 	@Override
@@ -24,8 +28,6 @@ public class home extends Activity implements OnClickListener{
 		hFriend.setOnClickListener(this);
 		hAbout = (Button) findViewById(R.id.homeAbout);
 		hAbout.setOnClickListener(this);
-		hLogout = (Button) findViewById(R.id.homeLogout);
-		hLogout.setOnClickListener(this);
 		Typeface font = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
 		TextView txt = (TextView) findViewById(R.id.homeTitle);  
 		txt.setTypeface(font);
@@ -44,6 +46,29 @@ public class home extends Activity implements OnClickListener{
 		Typeface hLO = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
 		TextView hL = (TextView) findViewById(R.id.homeLogout);  
 		hL.setTypeface(hLO);
+		hLogout = (Button) findViewById(R.id.homeLogout);
+		hLogout.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg) {
+				new AlertDialog.Builder(context)
+	        	.setMessage(R.string.LOtext)
+	               .setPositiveButton(R.string.bye, new DialogInterface.OnClickListener() {
+	                   public void onClick(DialogInterface dialog, int id) {
+	                	   Intent mfLO = new Intent(context, MainMenu.class);
+	                	   startActivity(mfLO);
+	                	   
+	                   }
+	               })
+	               .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+	                   public void onClick(DialogInterface dialog, int id) {
+	                	   dialog.cancel();
+	                   }
+	               })
+	               .show();
+				
+			}
+		});
 
 	}
 
@@ -65,10 +90,6 @@ public class home extends Activity implements OnClickListener{
 		case R.id.homeAbout:
 			Intent aB = new Intent(this, about.class);
 			startActivity(aB);
-			break;
-		case R.id.homeLogout:
-			Intent lO = new Intent(this, Logout.class);
-			startActivity(lO);
 			break;
 			
 		}

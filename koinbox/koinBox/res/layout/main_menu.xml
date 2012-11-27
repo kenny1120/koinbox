@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="@color/background" >
 
     <TextView
         android:id="@+id/main_title"
@@ -11,7 +12,11 @@
         android:layout_marginTop="156dp"
         android:text="@string/app_name"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="20pt" />
+        android:textSize="20pt"
+        android:shadowColor="#67587686" 
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="3"/>
 
     <TextView
         android:id="@+id/catch_phrase"
