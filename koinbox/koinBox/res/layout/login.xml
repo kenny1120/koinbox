@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent" 
+    android:background="@color/background">
 
     <TextView
         android:id="@+id/forgot_pass"
@@ -13,17 +14,21 @@
         android:clickable="true"
         android:linksClickable="true"
         android:text="@string/forgot"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall" 
+        android:textColor="@color/button"/>
 
     <Button
         android:id="@+id/log_in"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
         android:layout_above="@+id/forgot_pass"
         android:layout_alignLeft="@+id/password"
         android:layout_alignRight="@+id/password"
         android:layout_marginBottom="46dp"
-        android:text="@string/log" />
+        android:text="@string/log" 
+        android:textSize="13pt"
+        android:background="@drawable/round_button"
+        android:textColor="@color/white_text"/>
 
     <EditText
         android:id="@+id/password"
@@ -33,7 +38,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
         android:ems="10"
-         android:hint="@string/hintPass"
+        android:hint="@string/hintPass"
         android:inputType="textPassword"
         tools:ignore="ObsoleteLayoutParam" />
 
@@ -50,14 +55,18 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="48dp"
+        android:shadowColor="#67587686"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="3"
         android:text="@string/app_name"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:ignore="ObsoleteLayoutParam,HardcodedText"
-        android:textSize="20pt" />
+        android:textSize="23pt"
+        tools:ignore="ObsoleteLayoutParam,HardcodedText" />
 
 </RelativeLayout>

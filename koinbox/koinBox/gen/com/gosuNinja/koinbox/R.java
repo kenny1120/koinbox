@@ -15,19 +15,25 @@ public final class R {
     }
     public static final class color {
         public static final int background=0x7f040000;
+        public static final int button=0x7f040001;
+        public static final int button_shadow=0x7f040003;
+        public static final int impact_color=0x7f040004;
+        public static final int white_text=0x7f040002;
     }
     public static final class drawable {
         public static final int ic_action_search=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
+        public static final int koinbox_icon=0x7f020001;
+        public static final int koinbox_title_background=0x7f020002;
+        public static final int round_button=0x7f020003;
     }
     public static final class id {
         public static final int CopyR=0x7f090016;
-        public static final int LinearLayout01=0x7f090029;
-        public static final int LinearLayout02=0x7f090022;
+        public static final int LinearLayout01=0x7f090028;
+        public static final int LinearLayout02=0x7f090021;
         public static final int LinearLayout03=0x7f09000b;
         public static final int LinearLayout05=0x7f090004;
-        public static final int TOS=0x7f09003b;
-        public static final int ToS=0x7f09003a;
+        public static final int TOS=0x7f09003a;
+        public static final int ToS=0x7f090039;
         public static final int aBack=0x7f090000;
         public static final int aFriends=0x7f090007;
         public static final int aInfo=0x7f090002;
@@ -36,12 +42,12 @@ public final class R {
         public static final int aMKB=0x7f090006;
         public static final int aProf=0x7f090005;
         public static final int aTitle=0x7f090001;
-        public static final int age=0x7f090036;
-        public static final int ageTxt=0x7f090035;
-        public static final int catch_phrase=0x7f09001d;
-        public static final int checkpassW=0x7f090030;
-        public static final int destination=0x7f090039;
-        public static final int email=0x7f090033;
+        public static final int age=0x7f090035;
+        public static final int ageTxt=0x7f090034;
+        public static final int catch_phrase=0x7f09001c;
+        public static final int checkpassW=0x7f09002f;
+        public static final int destination=0x7f090038;
+        public static final int email=0x7f090032;
         public static final int fBack=0x7f090009;
         public static final int fFriends=0x7f09000e;
         public static final int fLogOut=0x7f09000f;
@@ -54,35 +60,34 @@ public final class R {
         public static final int homeLogout=0x7f090015;
         public static final int homeProf=0x7f090011;
         public static final int homeTitle=0x7f090010;
-        public static final int homeTown=0x7f090038;
+        public static final int homeTown=0x7f090037;
         public static final int homemykoin=0x7f090012;
         public static final int log_in=0x7f090018;
-        public static final int mBack=0x7f090020;
-        public static final int mFriends=0x7f090025;
-        public static final int mLogOut=0x7f090026;
-        public static final int mMKB=0x7f090024;
-        public static final int mProf=0x7f090023;
-        public static final int mTitle=0x7f090021;
-        public static final int main_title=0x7f09001c;
-        public static final int menu_settings=0x7f09003d;
-        public static final int name=0x7f090032;
-        public static final int pBack=0x7f090027;
-        public static final int pFriends=0x7f09002c;
-        public static final int pLogOut=0x7f09002d;
-        public static final int pMKB=0x7f09002b;
-        public static final int pProf=0x7f09002a;
-        public static final int pTitle=0x7f090028;
-        public static final int passW=0x7f09002f;
+        public static final int mBack=0x7f09001f;
+        public static final int mFriends=0x7f090024;
+        public static final int mLogOut=0x7f090025;
+        public static final int mMKB=0x7f090023;
+        public static final int mProf=0x7f090022;
+        public static final int mTitle=0x7f090020;
+        public static final int menu_settings=0x7f09003c;
+        public static final int name=0x7f090031;
+        public static final int pBack=0x7f090026;
+        public static final int pFriends=0x7f09002b;
+        public static final int pLogOut=0x7f09002c;
+        public static final int pMKB=0x7f09002a;
+        public static final int pProf=0x7f090029;
+        public static final int pTitle=0x7f090027;
+        public static final int passW=0x7f09002e;
         public static final int password=0x7f090019;
-        public static final int personal=0x7f090031;
-        public static final int phoneN=0x7f090034;
-        public static final int regis=0x7f09001e;
-        public static final int register=0x7f09003c;
-        public static final int school=0x7f090037;
-        public static final int signIn=0x7f09001f;
+        public static final int personal=0x7f090030;
+        public static final int phoneN=0x7f090033;
+        public static final int regis=0x7f09001d;
+        public static final int register=0x7f09003b;
+        public static final int school=0x7f090036;
+        public static final int signIn=0x7f09001e;
         public static final int title=0x7f09001b;
         public static final int userName=0x7f09001a;
-        public static final int welcomeTitle=0x7f09002e;
+        public static final int welcomeTitle=0x7f09002d;
     }
     public static final class layout {
         public static final int about=0x7f030000;

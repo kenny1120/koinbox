@@ -2,7 +2,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fillViewport="true"
-    android:visibility="visible" >
+    android:visibility="visible" 
+    android:background="@color/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,10 +12,14 @@
 
         <TextView
             android:id="@+id/welcomeTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="17dp"
             android:layout_marginTop="39dp"
+            android:shadowColor="#67587686"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="3"
             android:text="@string/welcome"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="13.5pt" />
@@ -51,7 +56,7 @@
 
         <TextView
             android:id="@+id/personal"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="5dp"
@@ -91,7 +96,7 @@
         
         <TextView
             android:id="@+id/ageTxt"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
@@ -103,7 +108,7 @@
             android:id="@+id/age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="-35dp"
             android:hint="@string/no" />
         
@@ -151,7 +156,7 @@
             android:id="@+id/TOS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="55dp"
             android:layout_marginTop="-15dp"
             android:clickable="true"
             android:linksClickable="true"
@@ -161,11 +166,16 @@
 
         <Button
             android:id="@+id/register"
-            android:layout_width="280dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/register" />
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_button"
+            android:text="@string/register"
+            android:textColor="@color/white_text"
+            android:textSize="10pt" />
+
     </LinearLayout>
 
 </ScrollView>

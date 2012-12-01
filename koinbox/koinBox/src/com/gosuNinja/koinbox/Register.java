@@ -2,6 +2,11 @@ package com.gosuNinja.koinbox;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
+import android.graphics.Typeface;
+import android.graphics.Shader.TileMode;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -9,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class Register extends Activity implements OnClickListener{
 	EditText userN, passw, rPass, rName, Email, phone, scho, home, dest;
@@ -36,6 +42,23 @@ public class Register extends Activity implements OnClickListener{
 		dest = (EditText) findViewById(R.id.destination);
 		term = (View) findViewById(R.id.TOS);
 		term.setOnClickListener(this);
+		Typeface font = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
+		TextView txt = (TextView) findViewById(R.id.welcomeTitle);  
+		txt.setTypeface(font);
+		Typeface rPL = Typeface.createFromAsset(getAssets(), "font/Impact Label.ttf");
+        TextView rP = (TextView) findViewById(R.id.personal);  
+        rP.setTypeface(rPL);
+        Typeface rAG = Typeface.createFromAsset(getAssets(), "font/Impact Label.ttf");
+        TextView rA = (TextView) findViewById(R.id.ageTxt);  
+        rA.setTypeface(rAG);
+        Typeface rster = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
+        TextView rS = (TextView) findViewById(R.id.register);  
+        rS.setTypeface(rster);
+        Shader textShader=new LinearGradient(2, 0, 4, 60,
+                new int[]{Color.parseColor("#000000"),Color.parseColor("#000000"),Color.parseColor("#000000")},
+                new float[]{0, 3,1}, TileMode.MIRROR);
+        txt.getPaint().setShader(textShader);
+
 	}
 
 	@Override

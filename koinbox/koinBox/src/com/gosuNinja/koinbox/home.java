@@ -5,6 +5,10 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
+import android.graphics.Shader.TileMode;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -69,6 +73,10 @@ public class home extends Activity implements OnClickListener{
 				
 			}
 		});
+        Shader textShader=new LinearGradient(2, 0, 4, 60,
+                new int[]{Color.parseColor("#000000"),Color.parseColor("#000000"),Color.parseColor("#000000")},
+                new float[]{0, 3,1}, TileMode.MIRROR);
+        txt.getPaint().setShader(textShader);
 
 	}
 

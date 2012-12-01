@@ -8,7 +8,7 @@
         android:targetSdkVersion="15" />
 
     <application
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/koinbox_icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -23,32 +23,25 @@
         
         <activity 
             android:name=".LogIn" 
-            android:label="@string/log" >
-        </activity>
+        ></activity>
         
         <activity 
             android:name=".Register"
-            android:label="@string/register" 
        ></activity>
         <activity
             android:name=".home"
-            android:label="@string/home" 
             ></activity>
         <activity
             android:name=".profile"
-            android:label="@string/prof" 
             ></activity>
         <activity
             android:name=".myKoinBox"
-            android:label="@string/mykoinBox" 
             ></activity>
         <activity
             android:name=".myFriends"
-            android:label="@string/friends" 
             ></activity>
         <activity 
             android:name=".about"
-            android:label="@string/about" 
             ></activity>
         <activity 
             android:name=".Logout"

@@ -5,7 +5,11 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.graphics.Typeface;
+import android.graphics.Shader.TileMode;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,6 +35,10 @@ public class profile extends Activity implements OnClickListener {
 		Typeface font = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
 		TextView txt = (TextView) findViewById(R.id.pTitle);  
 		txt.setTypeface(font);
+		Shader textShader=new LinearGradient(2, 0, 4, 60,
+                new int[]{Color.parseColor("#000000"),Color.parseColor("#000000"),Color.parseColor("#000000")},
+                new float[]{0, 3,1}, TileMode.MIRROR);
+        txt.getPaint().setShader(textShader);
 		Typeface pPro = Typeface.createFromAsset(getAssets(), "font/deftone_stylus.ttf");
 		TextView pP = (TextView) findViewById(R.id.pProf);  
 		pP.setTypeface(pPro);
@@ -44,7 +52,8 @@ public class profile extends Activity implements OnClickListener {
 		TextView pL = (TextView) findViewById(R.id.pLogOut);  
 		pL.setTypeface(pLO);
 		proLogout = (Button) findViewById(R.id.pLogOut);
-		proLogout.setOnClickListener(new View.OnClickListener() {
+		proLogout.setOnClickListener(new View.OnClickListener() 
+		{
 			
 			@Override
 			public void onClick(View arg) {

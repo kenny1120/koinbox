@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="@color/background" >
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -26,12 +27,16 @@
             <TextView
                 android:id="@+id/fTitle"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="55dp"
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="20dp"
+                android:shadowColor="#67587686"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="3"
                 android:text="@string/friends"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="15pt" />
+                android:textSize="17pt" />
         </LinearLayout>
     </ScrollView>
 
@@ -43,40 +48,45 @@
 
         <Button
             android:id="@+id/fProf"
-            android:layout_width="95dp"
+            android:layout_width="97dp"
             android:layout_height="50dp"
             android:layout_marginBottom="-6dp"
-            android:layout_marginLeft="-5dp"
+            android:layout_marginLeft="-7dp"
             android:text="@string/prof"
+            android:textColor="@color/button"
             android:textSize="7pt" />
 
         <Button
             android:id="@+id/fMKB"
-            android:layout_width="95dp"
+            android:layout_width="97dp"
             android:layout_height="50dp"
             android:layout_marginBottom="-6dp"
-            android:layout_marginLeft="-6dp"
+            android:layout_marginLeft="-7dp"
             android:text="@string/mykoinBox"
+            android:textColor="@color/button"
             android:textSize="7pt" />
 
         <Button
             android:id="@+id/fFriends"
-            android:layout_width="95dp"
+            android:layout_width="97dp"
             android:layout_height="50dp"
             android:layout_marginBottom="-6dp"
-            android:layout_marginLeft="-6dp"
+            android:layout_marginLeft="-7dp"
             android:text="@string/friends"
+            android:textColor="@color/button"
             android:textSize="7pt" />
 
         <Button
             android:id="@+id/fLogOut"
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="57dp"
+            android:layout_width="59dp"
             android:layout_height="50dp"
             android:layout_marginBottom="-6dp"
-            android:layout_marginLeft="-5dp"
+            android:layout_marginLeft="-7dp"
             android:text="@string/logout"
+            android:textColor="@color/button"
             android:textSize="5pt" />
+
     </TableRow>
 
 </RelativeLayout>

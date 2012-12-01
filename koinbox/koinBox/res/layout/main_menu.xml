@@ -1,52 +1,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/background" >
-
-    <TextView
-        android:id="@+id/main_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="156dp"
-        android:text="@string/app_name"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="20pt"
-        android:shadowColor="#67587686" 
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:shadowRadius="3"/>
+    android:background="@drawable/koinbox_title_background" >
 
     <TextView
         android:id="@+id/catch_phrase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/main_title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="235dp"
         android:text="@string/phrase"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="10pt" />
+        android:textSize="10pt"
+        android:textColor="@color/impact_color" />
 
     <Button
         android:id="@+id/regis"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_width="115dp"
+        android:layout_height="30dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/catch_phrase"
-        android:layout_marginLeft="26dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="22dp"
-        android:text="@string/register" />
+        android:text="@string/register"
+        android:textSize="10pt"
+        android:background="@drawable/round_button"
+        android:textColor="@color/white_text"/>
 
     <Button
         android:id="@+id/signIn"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_width="115dp"
+        android:layout_height="30dp"
         android:layout_alignBaseline="@+id/regis"
         android:layout_alignBottom="@+id/regis"
-        android:layout_marginLeft="26dp"
+        android:layout_marginLeft="12dp"
         android:layout_toRightOf="@+id/regis"
-        android:text="@string/log" />
+        android:text="@string/log"
+        android:textSize="10pt"
+        android:background="@drawable/round_button"
+        android:textColor="@color/white_text" />
 
 </RelativeLayout>
